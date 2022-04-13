@@ -11,7 +11,6 @@ namespace FinalExam413.Models
         //Constructor
         public QuoteFormContext(DbContextOptions<QuoteFormContext> options) : base(options)
         {
-            //Leaving blank for now
         }
 
         public DbSet<QuoteResponse> Quotes { get; set; }

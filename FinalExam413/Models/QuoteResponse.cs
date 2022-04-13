@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace FinalExam413.Models
 {
+    //Added Data Validation
     public class QuoteResponse
     {
         [Key]

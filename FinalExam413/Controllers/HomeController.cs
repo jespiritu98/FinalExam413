@@ -21,6 +21,7 @@ namespace FinalExam413.Controllers
         }
 
 
+        //Added order by for author
         public IActionResult Index()
         {
             var blah = _repo.Quotes
