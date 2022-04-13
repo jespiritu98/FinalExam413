@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model List<QuoteResponse>
+
+<div class="text-center">
+    <h1 class="display-4">Quotes to Remember</h1>
+    <p>Need a quote? You're at the right place.</p>
+</div>
+
+<div class="text-center">
+
+    @foreach (var x in Model)
+    {
+        <h3>"@x.Quote"</h3>
+
+        <a asp-controller="Home" asp-action="QuoteDetails" asp-route-quoteid="@x.QuoteId">Details</a>
+        <br />
+    }
+    <br />
+</div>
+<br />
+<div class="text-center">
+    <a asp-controller="Home" asp-action="QuoteForm">Add a quote here!</a>
+</div>
+<link href="~/css/site.css" rel="stylesheet" />

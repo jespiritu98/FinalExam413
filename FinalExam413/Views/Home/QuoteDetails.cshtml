@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Quote Details";
+}
+
+@model QuoteResponse
+
+<h2>Quote Details:</h2>
+<br />
+<table class="table table-bordered table-striped">
+
+    <thead class="font-weight-bold">
+        <tr>
+            <td>Quote</td>
+            <td>Author</td>
+            <td>Date</td>
+            <td>Subject</td>
+            <td>Citation</td>
+
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+            <td>@Model.Quote</td>
+            <td>@Model.Author </td>
+            <td>@Model.Date</td>
+            <td>@Model.Subject</td>
+            <td>@Model.Citation</td>
+
+            <td><a asp-controller="Home" asp-action="Edit" asp-route-quoteid="@Model.QuoteId">Edit</a></td>
+            <td><a asp-controller="Home" asp-action="Delete" asp-route-quoteid="@Model.QuoteId">Delete</a></td>
+
+
+        </tr>
+
+    </tbody>
+</table>
+<div>
+    <a type="button" class="btn btn-primary btn-sm" asp-controller="Home" asp-action="Index">Go back</a><br /><br />
+</div>
+<script src="~/js/site.js"></script>
